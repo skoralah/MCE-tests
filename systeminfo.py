@@ -37,17 +37,5 @@ def get_cpu_info():
     cpu_info = cpu_info.strip('\n').split('\n')
     return cpu_info
 
-def get_family_info():
-    """
-    Returns Number of thread(s) per core, number of core(s) per socket
-    and number of socket(s)
-    """
-    lscpu_info = Popen(["lscpu"], stdout=PIPE, universal_newlines=True)
-    family = Popen(["grep", "CPU family"],
-            stdin=lscpu_info.stdout, stdout=PIPE,
-            universal_newlines=True).communicate()[0]
-    lscpu_info.stdout.close()
-    return family
-
 if __name__ ==  "__main__":
     main()

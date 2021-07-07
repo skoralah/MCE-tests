@@ -23,7 +23,7 @@ class MceTest(Test):
                 % (cpu)])
 
             # Extract MCG_CAP[0:7] to get number of error reporting banks
-            out_MCG_CAP = int(out_MCG_CAP, 16) & 0xff
+            out_MCG_CAP = int(out_MCG_CAP[1:], 16)
 
             # Check for all available banks for the current cpu
             for bank in range(out_MCG_CAP + 1):

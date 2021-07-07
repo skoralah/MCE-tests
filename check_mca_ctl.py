@@ -17,7 +17,7 @@ from systeminfo import *
 # Extend it for future processors by adding corresponding equivalent IDs
 zp_eqid = ['0x00800f00', '0x00800f11', '0x00800f12']
 ssp_eqid = ['0x00830f00', '0x00830f10']
-gn_eqid = ['0x00a00f00']
+gn_eqid = ['0x00a00f00', '0x00a00f10']
 
 # Dictionary of MCA bank numbers and number of enable bits to be set for
 # each MCA bank control register
